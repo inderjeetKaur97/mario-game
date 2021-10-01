@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body {
+    background-color: #53cbd9;
+
+
+}
+
+.container {
+    background-image: url('img-mario-game/bg-L1.jpg');
+    background-repeat: repeat-x;
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 69vh;
+    transition: all 0.7s linear;
+
+    /* animation: bg1move 4s linear 3s infinite; */
+}
+
+.container2 {
+    background-image: url('img-mario-game/bg-L2.jpg');
+    background-repeat: repeat-x;
+    position: absolute;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+
+    transition: all 0.7s linear;
+    /* animation: bg1move 4s linear 3s infinite; */
+    bottom: -44px;
+}
+
+.container3 {
+    background-image: url('img-mario-game/bg-L3.jpg');
+    background-repeat: repeat-x;
+    position: absolute;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    transition: all 0.7s linear;
+
+    /* animation: bg1move 4s linear 3s infinite; */
+    bottom: -44px;
+}
+
+.gameover {
+    position: absolute;
+    background-color: whitesmoke;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    border: 2px solid green;
+    border-radius: 20px;
+    text-align: center;
+    width: 70vw;
+    /* height: 300px; */
+    padding: 20px;
+    top: 10vh;
+    left: 30vh;
+    font-family: sans-serif;
+    font-size: 26px;
+    /* visibility: hidden; */
+}
+
+.mario {
+    position: absolute;
+    bottom: 1vh;
+    left: 14vw;
+    background-image: url('img-mario-game/mario-level-1\ \(1\).png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 20.6vh;
+    width: 8vw;
+    z-index: +1;
+    /* animation: marioAni 1s linear 2s infinite; */
+
+}
+
+.mario2 {
+    position: absolute;
+    bottom: 1vh;
+    left: 14vw;
+    background-image: url('img-mario-game/mario-level-2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 20.6vh;
+    width: 8vw;
+    z-index: +1;
+    /* animation: marioAni 1s linear 2s infinite; */
+
+}
+
+.mario3 {
+    position: absolute;
+    bottom: 4vh;
+    left: 14vw;
+    background-image: url('img-mario-game/mario-level-3.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* height: 26.6vh; */
+    height: 19.6vh;
+    width: 5vw;
+    /* width: 7vw; */
+    z-index: +1;
+    /* animation: marioAni 1s linear 2s infinite; */
+
+}
+
+.marioAni {
+    animation: marioAni 0.5s linear 0s;
+}
+
+.obstacle {
+    background-image: url('img-mario-game/obstacle.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 10vh;
+    width: 10vw;
+    position: absolute;
+    bottom: 1vh;
+    right: 14vw;
+    transform: scaleX(-1);
+}
+/* .obstacle3 {
+    background-image: url('/img-mario-game/obstacle.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 15vh;
+    width: 15vw;
+    position: absolute;
+    bottom: 1vh;
+    right: 14vw;
+    transform: scaleX(-1);
+} */
+
+.obstacleAni {
+    animation: obstacleAni 3s linear 0s infinite;
+}
+
+.scorecont {
+    position: absolute;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    border: 2px solid green;
+    border-radius: 20px;
+    width: 197px;
+    padding: 12px;
+    top: 24vh;
+    left: 43vw;
+    font-family: sans-serif;
+    font-size: 26px;
+}
+
+.marioss {
+    transition: transform 0.5s linear;
+    animation: marioss 0.6s linear;
+}
+
+@keyframes marioss {
+    0% {
+        bottom: 0
+    }
+
+    50% {
+        bottom: 40vh;
+    }
+
+    100% {
+        bottom: 0;
+        transform: rotate(360deg);
+
+    }
+}
+
+
+@keyframes marioAni {
+    0% {
+        bottom: 0;
+    }
+
+    50% {
+        bottom: 40vh;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes obstacleAni {
+    0% {
+        left: 100vw;
+    }
+
+    100% {
+        left: -10vw;
+    }
+}
